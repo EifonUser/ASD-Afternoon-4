@@ -39,7 +39,7 @@ public class AddRecipe extends AppCompatActivity {
     static int cooking_time;
     static String food_picture;
     static  int food_picture_index;
-    static ArrayList<GuideStep> sbs_description = new ArrayList<GuideStep>();;
+    static ArrayList<GuideStep> sbs_description = new ArrayList<GuideStep>();
     static String tmp_food_picture;
 
     static boolean select_image = false;

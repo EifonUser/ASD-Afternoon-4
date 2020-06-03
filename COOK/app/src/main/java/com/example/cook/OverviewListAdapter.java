@@ -2,11 +2,9 @@ package com.example.cook;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.SearchEvent;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CompoundButton;
@@ -62,7 +60,7 @@ public class OverviewListAdapter extends ArrayAdapter<String> {
         viewHolder.detailViewButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DetailView.detail_view_recipe = Recipe.getRecipeByName(recipeName[position]);//????
+                DetailView.detail_view_recipe = Recipe.getRecipeByName(recipeName[position]);
                 Intent detail_view_intent = new Intent(context, DetailView.class);
                 context.startActivity(detail_view_intent);
             }
@@ -120,7 +118,7 @@ public class OverviewListAdapter extends ArrayAdapter<String> {
         ViewHolder (View v)
         {
             textViewRecipeName = (TextView) v.findViewById(R.id.textViewRecipeName);
-            textViewCookingTime = (TextView) v.findViewById(R.id.textViewCookingTime);
+            textViewCookingTime = (TextView) v.findViewById(R.id.textViewStep);
             textViewPreparationTime = (TextView) v.findViewById(R.id.textViewPreparationTime);
             textViewRecipeType = (TextView) v.findViewById(R.id.textViewRecipeType);
             imageViewRecipeOverview = (ImageView) v.findViewById(R.id.imageViewRecipeOverview);
